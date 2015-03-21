@@ -78,7 +78,7 @@ if ( ! empty ($index["CURRENCY"])) {
 if ( ! empty ($InputArray)) {
 	foreach ($InputArray as $InputVar) {
 		if ( ! empty ($InputVar)) {
-			
+
 			$InputCurrency = preg_split ("/ /", $InputVar);
 	
 			// This check for a conversion, if the 3 letter code is invalid.
@@ -93,14 +93,13 @@ if ( ! empty ($InputArray)) {
 				IGotAnError();
 				exit();
 			}
-
-			$OuputArray[] = "USD " . $ConvertedCurrency;
+			
+			$OutputArray[] = "USD " . $ConvertedCurrency;
 		}
 	}
 }
 
 print "Converted Currencies:\n";
-print_r($OutputArray);
 
 if ( ! empty ($OutputArray)) {
 	foreach ($OutputArray as $ConverCurrency) {
